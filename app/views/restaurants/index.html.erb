@@ -1,14 +1,4 @@
 <h1>Restaurant de titeuf de l'amour</h1>
 <% @restaurants.each do |r| %>
-  <ul>
-    <li>
-      Name: <%= r.name %>
-    </li>
-    <li>
-      Address: <%= r.address %>
-    </li>
-    <li>
-      Category: <%= r.category %>
-    </li>
-  </ul>
+  Name: <%= link_to r.name, restaurant_path(r) %>
 <% end %>
