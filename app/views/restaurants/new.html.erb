@@ -1,0 +1,12 @@
+<div class="container">
+<!--   <div class="center"> -->
+    <%= simple_form_for(@restaurant) do |r| %>
+      <%= r.input :name, input_html: { autocomplete: "off" } %>
+      <%= r.input :address, input_html: { autocomplete: "off" } %>
+      <%= r.input :category, input_html: { autocomplete: "off" } %>
+      <%= r.button :submit, class: "btn btn-primary" %>
+    <% end %>
+<!--   </div> -->
+  <%= link_to "Back to restaurants", restaurants_path, class: "btn btn-primary"  %>
+</div>
+

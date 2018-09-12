@@ -4,5 +4,11 @@ Address: <%= @restaurant.address %>
 
 Category: <%= @restaurant.category %>
 
-<%= link_to 'Back to restaurants', restaurants_path  %>
+<%= link_to 'Back to restaurants', restaurants_path, class:"btn btn-primary"  %>
 <%#= link_to 'Add a review',  %>
+<br>
+<%= link_to "Edit restaurant", edit_restaurant_path, class:"btn btn-primary"%>
+<br>
+<%= link_to "Delete restaurant", restaurant_path(@restaurant), class:"btn btn-primary",
+  method: :delete,
+  data: {confirm: "Are you sure?"}   %>
