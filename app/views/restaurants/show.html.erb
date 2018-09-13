@@ -7,8 +7,10 @@
   Category: <%= @restaurant.category %>
   <br>
   <h2>Reviews:</h2>
-  <% @restaurant.reviews.each do |r| %>
-    <ul> -<%= r.star %> <%= r.description %></ul>
+  <% @restaurant.reviews.each_with_index do |r, index| %>
+    <ul> <%= index+1 %>-- stars: <%= r.star %> description: <%= r.description %> <%= link_to 'delete', restaurant_review_path(@restaurant, r), class:"btn btn-primary",
+    method: :delete,
+    data: {confirm: "Are you sure?"}   %></ul>
   <% end %>
   <br>
   <%= link_to 'Back to restaurants', restaurants_path, class:"btn btn-primary"  %>
