@@ -1,3 +1,8 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path 's.jpg', alt: 'sushi' %>)">
+  <div class="banner-content">
+    <!-- <h1 class= "alchemist">The alchemist</h1> <br> -->
+    <%#= link_to "Make a new cocktail", new_cocktail_path, class: "btn btn-success btn_b" %>
+
 <h1>Restaurants</h1>
 <% @restaurants.each do |r| %>
 <ul>
@@ -7,3 +12,6 @@
 
 <br>
 <%= link_to "Create a new restaurant", new_restaurant_path, class:"btn btn-primary" %>
+  </div>
+</div>
+
