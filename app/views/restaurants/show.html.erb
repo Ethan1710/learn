@@ -1,14 +1,18 @@
-<%= @restaurant.name %>
+<div class="container">
+  <br>
+  <%= @restaurant.name %>
+  <br>
+  Address: <%= @restaurant.address %>
+  <br>
+  Category: <%= @restaurant.category %>
+  <br>
+  <%= link_to 'Back to restaurants', restaurants_path, class:"btn btn-primary"  %>
+  <%#= link_to 'Add a review',  %>
 
-Address: <%= @restaurant.address %>
+  <%= link_to "Edit restaurant", edit_restaurant_path, class:"btn btn-primary"%>
 
-Category: <%= @restaurant.category %>
-
-<%= link_to 'Back to restaurants', restaurants_path, class:"btn btn-primary"  %>
-<%#= link_to 'Add a review',  %>
-<br>
-<%= link_to "Edit restaurant", edit_restaurant_path, class:"btn btn-primary"%>
-<br>
-<%= link_to "Delete restaurant", restaurant_path(@restaurant), class:"btn btn-primary",
-  method: :delete,
-  data: {confirm: "Are you sure?"}   %>
+  <%= link_to "Delete restaurant", restaurant_path(@restaurant), class:"btn btn-primary",
+    method: :delete,
+    data: {confirm: "Are you sure?"}   %>
+</div>
+<%= link_to "Create Review", new_restaurant_review_path(@restaurant)  %>
