@@ -1,0 +1,12 @@
+<%= simple_form_for [@restaurant, @review] do |r| %>
+ <%#= r.association :ingredient %>
+ <%= r.input :description %>
+ <%= r.input :star %>
+
+
+  <!-- d.input :rating, collection: 0..5  -->
+
+  <%= r.submit %>
+<% end %>
+
+<%= link_to "Back to restaurants", restaurant_path(@restaurant), class: "btn btn-primary"  %>
