@@ -2,10 +2,35 @@
   <div class="banner-content">
     <h1>Restaurants</h1>
     <% @restaurants.each do |r| %>
-    <div class="name">
-      Name: <%= link_to r.name.capitalize, restaurant_path(r)%>
-      <% end %>
-    </div>
     <%= link_to "Create a new restaurant", new_restaurant_path, class:"btn btn-primary" %>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 card">
+      <!-- <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');"> -->
+        <%= image_tag("it.jpg", :alt => "rss feed") %>
+        <!-- <div class="card-category">Popular</div> -->
+        <!-- <div class="card-description"> -->
+
+<!-- ADD THE NAME I.E. MARCO'S TO THE DIV OF THE PICTURE.. -->
+
+          <div class="name">
+            <%= link_to r.name.capitalize, restaurant_path(r)%>
+            <% end %>
+          </div>
+        </div>
+        <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+        <a class="card-link" href="#" ></a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <!-- insert <div class="card"> -->
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <!-- insert <div class="card"> -->
+    </div>
   </div>
 </div>
