@@ -10,19 +10,20 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-4 card">
-      <%= image_tag("it.jpg", :alt => "rss feed") %>
+      <%= image_tag("it.jpg", :alt => "rss feed", class:"pic") %>
         <%= link_to r.name.capitalize, restaurant_path(r)%>
       <% end %>
     </div>
-    <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-    <a class="card-link" href="#" ></a>
   </div>
 </div>
 
 
-    <div class="col-xs-12 col-sm-4">
+    <!-- <div class="col-xs-12 col-sm-4"> -->
       <!-- insert <div class="card"> -->
-    </div>
+    <!-- </div> -->
+
+
+<!-- HAVE A LOOK AT THIS: -->
+<% @restaurants.each do |r| %>
     <div class="col-xs-12 col-sm-4">
-      <!-- insert <div class="card"> -->
-    </div>
+      <%= link_to restaurant_path(r) do %>
